@@ -1,0 +1,40 @@
+tim flash  安装
+下载需要的 install_flash_player_ppapi.exe
+将下载的安装文件放入 ~/.deepinwine/Deepin-TIM/drive_c 下，即 TIM 所在 Wine C 盘根目录
+打开一个 Terminal ，执行：
+WINEPREFIX=~/.deepinwine/Deepin-TIM deepin-wine "c:\\install_flash_player_ppapi.exe"
+
+
+
+5）手动更改配置（winecfg）
+执行 WINEPREFIX=~/.deepinwine/容器名称 deepin-wine winecfg 即可，也可以用此方法来调整缩放问题
+
+（6）解决系统非中文语言环境时软件无法设置为中文
+在/opt/deepinwine/tools/run.sh 中将 WINE_CMD 那一行修改为 WINE_CMD="LC_ALL=zh_CN.UTF-8 deepin-wine"
+run_v2也要改
+
+
+
+微信无法发送图片
+sudo apt-get install libjpeg62:i386
+
+
+
+乱码解决方法
+1.将simsun.ttc放在~/.deepinwine/XXX/drive_c/windows/Fonts
+2.deepin-wine regedit zh.reg 
+
+
+微信小黑块 
+把run_v3放入/opt/deepinwine/apps/Deepin-WeChat/中 
+并把/usr/share/applications/deepin.com.wechat.desktop中的 run.sh改为 run_v3.sh 其中 sleep可以更改
+若不能消去 则把sleep改大一点
+
+桌面有两个图标 
+把/usr/share/applications/deepin.com.xxx.desktop中的
+对于微信 StartupWMClass=wechat.exe
+对于 tm StartupWMClass=tim.exe
+
+
+
+

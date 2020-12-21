@@ -1,0 +1,15 @@
+
+
+
+在官方软件库下完软件包之后 直接运行 sudo sh ./install_2.8.22
+
+软件在官方软件仓库下载
+https://packages.deepin.com/deepin/pool/non-free/d/
+
+
+原始文档
+https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu
+
+
+卸载方法
+执行uninstall.sh即可
